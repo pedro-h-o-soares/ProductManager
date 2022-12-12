@@ -40,8 +40,7 @@ namespace ProductManager.Application.Service
 
         public ProductDTO GetById(int id)
         {
-            var objProduct = _mapperProduct.MapperToEntity(GetById(id));
-            return _mapperProduct.MapperToDTO(objProduct);
+            return _mapperProduct.MapperToDTO(_serviceProduct.GetById(id));
         }
 
         public void Remove(ProductDTO obj)
