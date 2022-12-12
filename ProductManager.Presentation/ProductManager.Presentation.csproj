@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="6.5.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -20,7 +19,9 @@
   <ItemGroup>
     <ProjectReference Include="..\ProductManager.Application.DTO\ProductManager.Application.DTO.csproj" />
     <ProjectReference Include="..\ProductManager.Application\ProductManager.Application.csproj" />
+    <ProjectReference Include="..\ProductManager.Domain.Services\ProductManager.Domain.Services.csproj" />
     <ProjectReference Include="..\ProductManager.Infraestructure.Data\ProductManager.Infraestructure.Data.csproj" />
+    <ProjectReference Include="..\ProductManager.Infraestructure.Repository\ProductManager.Infraestructure.Repository.csproj" />
   </ItemGroup>
 
 </Project>
