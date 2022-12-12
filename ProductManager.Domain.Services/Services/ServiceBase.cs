@@ -24,6 +24,10 @@ namespace ProductManager.Domain.Services.Services
         {
             return _repository.GetAll();
         }
+        public void Add(TEntity obj)
+        {
+            _repository.Add(obj);
+        }
         public virtual void Update(TEntity obj)
         {
             _repository.Update(obj);

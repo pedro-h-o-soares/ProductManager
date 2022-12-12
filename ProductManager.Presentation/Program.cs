@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ProductManager
+namespace ProductManager.Presentation
 {
     public class Program
     {

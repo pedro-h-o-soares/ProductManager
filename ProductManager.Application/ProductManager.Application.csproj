@@ -11,4 +11,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ProductManager.Application.DTO\ProductManager.Application.DTO.csproj" />
+    <ProjectReference Include="..\ProductManager.Domain.Core\ProductManager.Domain.Core.csproj" />
+    <ProjectReference Include="..\ProductManager.Infrastruture.CrossCutting.Adapter\ProductManager.Infrastruture.CrossCutting.Adapter.csproj" />
+  </ItemGroup>
+
 </Project>

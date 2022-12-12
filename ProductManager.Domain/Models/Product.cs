@@ -4,7 +4,6 @@ namespace ProductManager.Domain.Models
 {
     public class Product : Base
     {
-        public int MyProperty { get; set; }
         public string Description { get; set; }
         public bool Active { get; set; }
         public DateTime ManufacturingDate { get; set; }

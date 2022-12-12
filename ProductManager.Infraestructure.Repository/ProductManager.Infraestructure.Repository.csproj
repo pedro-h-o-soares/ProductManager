@@ -11,4 +11,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ProductManager.Domain.Core\ProductManager.Domain.Core.csproj" />
+    <ProjectReference Include="..\ProductManager.Infraestructure.Data\ProductManager.Infraestructure.Data.csproj" />
+  </ItemGroup>
+
 </Project>

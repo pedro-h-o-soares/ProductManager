@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProductManager.Application\ProductManager.Application.csproj" />
+    <ProjectReference Include="..\ProductManager.Domain.Services\ProductManager.Domain.Services.csproj" />
+    <ProjectReference Include="..\ProductManager.Infraestructure.Repository\ProductManager.Infraestructure.Repository.csproj" />
+    <ProjectReference Include="..\ProductManager.Infrastruture.CrossCutting.Adapter\ProductManager.Infrastruture.CrossCutting.Adapter.csproj" />
+  </ItemGroup>
+
+</Project>
