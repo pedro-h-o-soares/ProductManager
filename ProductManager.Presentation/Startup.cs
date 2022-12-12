@@ -8,7 +8,7 @@ using Microsoft.OpenApi.Models;
 using ProductManager.Application.Interfaces;
 using ProductManager.Application.Service;
 using ProductManager.Domain.Core.Interfaces.Repositories;
-using ProductManager.Domain.Core.Services;
+using ProductManager.Domain.Core.Interfaces.Services;
 using ProductManager.Domain.Services.Services;
 using ProductManager.Infraestructure.Data;
 using ProductManager.Infraestructure.Repository.Repositories;

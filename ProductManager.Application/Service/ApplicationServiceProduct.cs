@@ -1,6 +1,6 @@
 ﻿using ProductManager.Application.DTO.DTO;
 using ProductManager.Application.Interfaces;
-using ProductManager.Domain.Core.Services;
+using ProductManager.Domain.Core.Interfaces.Services;
 using ProductManager.Infrastruture.CrossCutting.Adapter.Interfaces;
 using System;
 using System.Collections.Generic;

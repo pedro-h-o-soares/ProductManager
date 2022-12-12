@@ -1,5 +1,5 @@
 ﻿using ProductManager.Domain.Core.Interfaces.Repositories;
-using ProductManager.Domain.Core.Services;
+using ProductManager.Domain.Core.Interfaces.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
