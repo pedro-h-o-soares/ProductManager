@@ -24,10 +24,11 @@ namespace ProductManager.Infrastruture.CrossCutting.Adapter.Map
         {
             Product product = new Product
             {
-                Id = productDTO.Id,
                 Description = productDTO.Description,
                 ExpiringDate = productDTO.ExpiringDate,
                 ManufacturingDate = productDTO.ManufacturingDate,
+                ProviderCnpj = productDTO.ProviderCnpj,
+                ProviderDescription = productDTO.ProviderDescription
             };
 
             return product;
@@ -39,10 +40,11 @@ namespace ProductManager.Infrastruture.CrossCutting.Adapter.Map
             {
                 ProductDTO productDTO = new ProductDTO
                 {
-                    Id = item.Id,
                     Description = item.Description,
                     ExpiringDate = item.ExpiringDate,
                     ManufacturingDate = item.ManufacturingDate,
+                    ProviderCnpj= item.ProviderCnpj,
+                    ProviderDescription = item.ProviderDescription
                 };
 
                 productDTOs.Add(productDTO);
@@ -56,10 +58,11 @@ namespace ProductManager.Infrastruture.CrossCutting.Adapter.Map
 
             ProductDTO productDTO = new ProductDTO
             {
-                Id = product.Id,
                 Description = product.Description,
                 ExpiringDate = product.ExpiringDate,
                 ManufacturingDate = product.ManufacturingDate,
+                ProviderCnpj= product.ProviderCnpj,
+                ProviderDescription = product.ProviderDescription
             };
 
             return productDTO;
