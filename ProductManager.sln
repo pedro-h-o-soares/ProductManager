@@ -11,29 +11,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.0 - Domain", "3.0 - Domai
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.0 - Infrastructure", "4.0 - Infrastructure", "{01F391EA-449E-47E0-8AEB-42F7B5DBFD71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManager.Domain", "ProductManager.Domain\ProductManager.Domain.csproj", "{C8E96CD9-B3A5-498C-A223-1CAA858BB5B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductManager.Domain", "ProductManager.Domain\ProductManager.Domain.csproj", "{C8E96CD9-B3A5-498C-A223-1CAA858BB5B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManager.Domain.Core", "ProductManager.Domain.Core\ProductManager.Domain.Core.csproj", "{76618BDE-1E70-48DC-ABCB-A8E97686A5A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductManager.Domain.Core", "ProductManager.Domain.Core\ProductManager.Domain.Core.csproj", "{76618BDE-1E70-48DC-ABCB-A8E97686A5A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManager.Domain.Services", "ProductManager.Domain.Services\ProductManager.Domain.Services.csproj", "{E4856595-845C-44E8-B225-0E34942CF2D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductManager.Domain.Services", "ProductManager.Domain.Services\ProductManager.Domain.Services.csproj", "{E4856595-845C-44E8-B225-0E34942CF2D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManager.Application", "ProductManager.Application\ProductManager.Application.csproj", "{18032495-9672-45FA-88BA-7F14C6ED4086}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductManager.Application", "ProductManager.Application\ProductManager.Application.csproj", "{18032495-9672-45FA-88BA-7F14C6ED4086}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManager.Application.DTO", "ProductManager.Application.DTO\ProductManager.Application.DTO.csproj", "{527D1A08-1868-4279-BD41-88F0C39AAD4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductManager.Application.DTO", "ProductManager.Application.DTO\ProductManager.Application.DTO.csproj", "{527D1A08-1868-4279-BD41-88F0C39AAD4B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{A5236138-B241-4BF0-901C-D41F6AFD3CBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManager.Infraestructure.Data", "ProductManager.Infraestructure.Data\ProductManager.Infraestructure.Data.csproj", "{DEDD4B66-4D10-4F2A-A2BE-DED81297FBA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductManager.Infraestructure.Data", "ProductManager.Infraestructure.Data\ProductManager.Infraestructure.Data.csproj", "{DEDD4B66-4D10-4F2A-A2BE-DED81297FBA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManager.Infraestructure.Repository", "ProductManager.Infraestructure.Repository\ProductManager.Infraestructure.Repository.csproj", "{8D58E437-E203-404E-880D-10A1102764BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductManager.Infraestructure.Repository", "ProductManager.Infraestructure.Repository\ProductManager.Infraestructure.Repository.csproj", "{8D58E437-E203-404E-880D-10A1102764BF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{0DDA06AD-60E4-43EA-88AD-7D6274BB165A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManager.Infrastruture.CrossCutting.Adapter", "ProductManager.Infrastruture.CrossCutting.Adapter\ProductManager.Infrastruture.CrossCutting.Adapter.csproj", "{C0FDC217-4E92-4D52-9A24-56C5CE4A33CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductManager.Infrastruture.CrossCutting.Adapter", "ProductManager.Infrastruture.CrossCutting.Adapter\ProductManager.Infrastruture.CrossCutting.Adapter.csproj", "{C0FDC217-4E92-4D52-9A24-56C5CE4A33CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManager.Infrastruture.CrossCutting.IOC", "ProductManager.Infrastruture.CrossCutting.IOC\ProductManager.Infrastruture.CrossCutting.IOC.csproj", "{FC709297-9950-4E80-8A01-DBD9C79842AD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManager.Presentation", "ProductManager.Presentation\ProductManager.Presentation.csproj", "{57C6226C-A106-4347-9E9F-1E8AFB7DBC79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductManager.Presentation", "ProductManager.Presentation\ProductManager.Presentation.csproj", "{57C6226C-A106-4347-9E9F-1E8AFB7DBC79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,10 +71,6 @@ Global
 		{C0FDC217-4E92-4D52-9A24-56C5CE4A33CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0FDC217-4E92-4D52-9A24-56C5CE4A33CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0FDC217-4E92-4D52-9A24-56C5CE4A33CE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FC709297-9950-4E80-8A01-DBD9C79842AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC709297-9950-4E80-8A01-DBD9C79842AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC709297-9950-4E80-8A01-DBD9C79842AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC709297-9950-4E80-8A01-DBD9C79842AD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{57C6226C-A106-4347-9E9F-1E8AFB7DBC79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{57C6226C-A106-4347-9E9F-1E8AFB7DBC79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57C6226C-A106-4347-9E9F-1E8AFB7DBC79}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -96,7 +90,6 @@ Global
 		{8D58E437-E203-404E-880D-10A1102764BF} = {A5236138-B241-4BF0-901C-D41F6AFD3CBE}
 		{0DDA06AD-60E4-43EA-88AD-7D6274BB165A} = {01F391EA-449E-47E0-8AEB-42F7B5DBFD71}
 		{C0FDC217-4E92-4D52-9A24-56C5CE4A33CE} = {0DDA06AD-60E4-43EA-88AD-7D6274BB165A}
-		{FC709297-9950-4E80-8A01-DBD9C79842AD} = {0DDA06AD-60E4-43EA-88AD-7D6274BB165A}
 		{57C6226C-A106-4347-9E9F-1E8AFB7DBC79} = {27C9CBC9-768A-4A5B-A919-69D59219D296}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
