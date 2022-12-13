@@ -26,6 +26,7 @@ namespace ProductManager.Application.Service
 
         public void Add(ProductDTO obj)
         {
+            if (obj.ExpiringDate < obj.ManufacturingDate) throw new ArgumentException("ExpiringData must be greater than ManufacturingDate");
             var objProduct = _mapperProduct.MapperToEntity(obj);
             _serviceProduct.Add(objProduct);
         }
@@ -54,6 +55,8 @@ namespace ProductManager.Application.Service
 
         public void Update(ProductDTO obj)
         {
+            if (obj.ExpiringDate < obj.ManufacturingDate) throw new ArgumentException("ExpiringData must be greater than ManufacturingDate");
+
             var objProduct = _mapperProduct.MapperToEntity(obj);
             _serviceProduct.Update(objProduct);
         }

@@ -41,13 +41,12 @@ namespace ProductManager.Presentation.Controllers
                 if (productDTO == null)
                     return NotFound();
 
-                if (productDTO.ExpiringDate < productDTO.ManufacturingDate)
-                {
-                    return BadRequest();
-                }
-
                 _applicationServiceProduct.Add(productDTO);
                 return Ok("Produto cadastrado com sucesso");
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
             }
             catch (Exception ex)
             {
@@ -64,13 +63,12 @@ namespace ProductManager.Presentation.Controllers
                 if (productDTO == null)
                     return NotFound();
 
-                if (productDTO.ExpiringDate < productDTO.ManufacturingDate)
-                {
-                    return BadRequest("A data de expiração deve ser maior que a de fabricação");
-                }
-
                 _applicationServiceProduct.Update(productDTO);
                 return Ok("Produto atualizado com sucesso");
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
             }
             catch (Exception ex)
             {
