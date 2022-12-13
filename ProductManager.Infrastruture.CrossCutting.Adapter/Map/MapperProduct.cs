@@ -1,4 +1,5 @@
-﻿using ProductManager.Application.DTO.DTO;
+﻿using AutoMapper;
+using ProductManager.Application.DTO.DTO;
 using ProductManager.Domain.Models;
 using ProductManager.Infrastruture.CrossCutting.Adapter.Interfaces;
 using System;
@@ -11,6 +12,21 @@ namespace ProductManager.Infrastruture.CrossCutting.Adapter.Map
 {
     public class MapperProduct : IMapperProduct
     {
+        private IMapper _mapper;
+
+        #region Constructor
+
+        public MapperProduct()
+        {
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Product, ProductDTO>();
+                cfg.CreateMap<ProductDTO, Product>();
+            });
+            _mapper = config.CreateMapper();
+        }
+
+        #endregion
 
         #region Properties
 
@@ -22,36 +38,14 @@ namespace ProductManager.Infrastruture.CrossCutting.Adapter.Map
 
         public Product MapperToEntity(ProductDTO productDTO)
         {
-            Product product = new Product
-            {
-                Id = productDTO.Id,
-                Active= productDTO.Active,
-                Description = productDTO.Description,
-                ExpiringDate = productDTO.ExpiringDate,
-                ManufacturingDate = productDTO.ManufacturingDate,
-                ProviderCnpj = productDTO.ProviderCnpj,
-                ProviderDescription = productDTO.ProviderDescription
-            };
-
-            return product;
+            return _mapper.Map<Product>(productDTO);
         }
 
         public IEnumerable<ProductDTO> MapperListProducts(IEnumerable<Product> products)
         {
             foreach (var item in products)
             {
-                ProductDTO productDTO = new ProductDTO
-                {
-                    Id = item.Id,
-                    Active= item.Active,
-                    Description = item.Description,
-                    ExpiringDate = item.ExpiringDate,
-                    ManufacturingDate = item.ManufacturingDate,
-                    ProviderCnpj= item.ProviderCnpj,
-                    ProviderDescription = item.ProviderDescription
-                };
-
-                productDTOs.Add(productDTO);
+                productDTOs.Add(_mapper.Map<ProductDTO>(item));
             }
 
             return productDTOs;
@@ -59,19 +53,7 @@ namespace ProductManager.Infrastruture.CrossCutting.Adapter.Map
 
         public ProductDTO MapperToDTO(Product product)
         {
-
-            ProductDTO productDTO = new ProductDTO
-            {
-                Id = product.Id,
-                Active= product.Active,
-                Description = product.Description,
-                ExpiringDate = product.ExpiringDate,
-                ManufacturingDate = product.ManufacturingDate,
-                ProviderCnpj= product.ProviderCnpj,
-                ProviderDescription = product.ProviderDescription
-            };
-
-            return productDTO;
+            return _mapper.Map<ProductDTO>(product);
         }
 
 
