@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProductManager.Application.DTO.DTO;
 using ProductManager.Application.Interfaces;
+using ProductManager.Domain.Filters;
 using ProductManager.Domain.Models;
 using System;
 using System.Collections.Generic;
@@ -20,9 +21,9 @@ namespace ProductManager.Presentation.Controllers
 
         // GET api/product
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get([FromHeader] PaginationModel pagination, [FromHeader] )
+        public ActionResult<IEnumerable<string>> Get([FromHeader] PaginationModel pagination, [FromHeader] ProductFilter filter)
         {
-            return Ok(_applicationServiceProduct.GetAll(pagination));
+            return Ok(_applicationServiceProduct.GetAll(pagination, filter.SetFilter()));
         }
 
         // GET api/product/5

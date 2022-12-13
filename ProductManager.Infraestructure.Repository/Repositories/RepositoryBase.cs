@@ -5,6 +5,7 @@ using ProductManager.Infraestructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -37,21 +38,21 @@ namespace ProductManager.Infraestructure.Repository.Repositories
             return _context.Set<TEntity>().Find(id);
         }
 
-        public IEnumerable<TEntity> GetAll(PaginationModel pagination)
+        public IEnumerable<TEntity> GetAll(PaginationModel pagination, Expression<Func<TEntity, bool>> filter)
         {
             var page = pagination.Page - 1;
             var pageSize = pagination.PageSize;
             IQueryable<TEntity> query = _context.Set<TEntity>();
 
+            if (filter != null)
+                query = query.Where(filter);
+
             if (page > 0)
-            {
                 query = query.Skip(page*pageSize);
-            }
 
             if (pageSize > 0)
-            {
                 query = query.Take(pageSize);
-            }
+
 
             return query.ToList();
         }

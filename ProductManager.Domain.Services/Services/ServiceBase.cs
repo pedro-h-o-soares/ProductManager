@@ -4,6 +4,7 @@ using ProductManager.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,9 +22,9 @@ namespace ProductManager.Domain.Services.Services
         {
             return _repository.GetById(id);
         }
-        public virtual IEnumerable<TEntity> GetAll(PaginationModel pagination)
+        public virtual IEnumerable<TEntity> GetAll(PaginationModel pagination, Expression<Func<TEntity, bool>> filter)
         {
-            return _repository.GetAll(pagination);
+            return _repository.GetAll(pagination, filter);
         }
         public void Add(TEntity obj)
         {

@@ -1,11 +1,13 @@
 ﻿using ProductManager.Application.DTO.DTO;
 using ProductManager.Application.Interfaces;
 using ProductManager.Domain.Core.Interfaces.Services;
+using ProductManager.Domain.Filters;
 using ProductManager.Domain.Models;
 using ProductManager.Infrastruture.CrossCutting.Adapter.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,9 +35,9 @@ namespace ProductManager.Application.Service
             _serviceProduct.Dispose();
         }
 
-        public IEnumerable<ProductDTO> GetAll(PaginationModel pagination)
+        public IEnumerable<ProductDTO> GetAll(PaginationModel pagination, Expression<Func<Product, bool>> filter)
         {
-            var objProducts = _serviceProduct.GetAll(pagination);
+            var objProducts = _serviceProduct.GetAll(pagination, filter);
             return _mapperProduct.MapperListProducts(objProducts);
         }
 

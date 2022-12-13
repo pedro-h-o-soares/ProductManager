@@ -1,5 +1,8 @@
-﻿using ProductManager.Domain.Models;
+﻿using ProductManager.Domain.Filters;
+using ProductManager.Domain.Models;
+using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Runtime.InteropServices;
 
 namespace ProductManager.Domain.Core.Interfaces.Repositories
@@ -10,7 +13,7 @@ namespace ProductManager.Domain.Core.Interfaces.Repositories
 
         TEntity GetById(int id);
 
-        IEnumerable<TEntity> GetAll(PaginationModel pagination);
+        IEnumerable<TEntity> GetAll(PaginationModel pagination, Expression<Func<TEntity, bool>> filter);
 
         void Update(TEntity obj);
 
