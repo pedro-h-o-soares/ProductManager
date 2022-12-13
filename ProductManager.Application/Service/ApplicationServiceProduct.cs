@@ -1,6 +1,7 @@
 ﻿using ProductManager.Application.DTO.DTO;
 using ProductManager.Application.Interfaces;
 using ProductManager.Domain.Core.Interfaces.Services;
+using ProductManager.Domain.Models;
 using ProductManager.Infrastruture.CrossCutting.Adapter.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -32,9 +33,9 @@ namespace ProductManager.Application.Service
             _serviceProduct.Dispose();
         }
 
-        public IEnumerable<ProductDTO> GetAll()
+        public IEnumerable<ProductDTO> GetAll(PaginationModel pagination)
         {
-            var objProducts = _serviceProduct.GetAll();
+            var objProducts = _serviceProduct.GetAll(pagination);
             return _mapperProduct.MapperListProducts(objProducts);
         }
 

@@ -24,6 +24,8 @@ namespace ProductManager.Infrastruture.CrossCutting.Adapter.Map
         {
             Product product = new Product
             {
+                Id = productDTO.Id,
+                Active= productDTO.Active,
                 Description = productDTO.Description,
                 ExpiringDate = productDTO.ExpiringDate,
                 ManufacturingDate = productDTO.ManufacturingDate,
@@ -40,6 +42,8 @@ namespace ProductManager.Infrastruture.CrossCutting.Adapter.Map
             {
                 ProductDTO productDTO = new ProductDTO
                 {
+                    Id = item.Id,
+                    Active= item.Active,
                     Description = item.Description,
                     ExpiringDate = item.ExpiringDate,
                     ManufacturingDate = item.ManufacturingDate,
@@ -58,6 +62,8 @@ namespace ProductManager.Infrastruture.CrossCutting.Adapter.Map
 
             ProductDTO productDTO = new ProductDTO
             {
+                Id = product.Id,
+                Active= product.Active,
                 Description = product.Description,
                 ExpiringDate = product.ExpiringDate,
                 ManufacturingDate = product.ManufacturingDate,

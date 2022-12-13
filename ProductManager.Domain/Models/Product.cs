@@ -5,7 +5,6 @@ namespace ProductManager.Domain.Models
     public class Product : Base
     {
         public string Description { get; set; }
-        public bool Active { get; set; }
         public DateTime ManufacturingDate { get; set; }
         public DateTime ExpiringDate { get; set; }
         public int ProviderId { get; set; }

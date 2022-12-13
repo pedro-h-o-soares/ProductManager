@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProductManager.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace ProductManager.Domain.Core.Interfaces.Services
     {
         public TEntity GetById(int id);
 
-        public IEnumerable<TEntity> GetAll();
+        public IEnumerable<TEntity> GetAll(PaginationModel pagination);
 
         public void Add(TEntity obj);
 

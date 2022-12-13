@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using ProductManager.Domain.Models;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace ProductManager.Domain.Core.Interfaces.Repositories
 {
@@ -8,7 +10,7 @@ namespace ProductManager.Domain.Core.Interfaces.Repositories
 
         TEntity GetById(int id);
 
-        IEnumerable<TEntity> GetAll();
+        IEnumerable<TEntity> GetAll(PaginationModel pagination);
 
         void Update(TEntity obj);
 

@@ -1,5 +1,6 @@
 ﻿using ProductManager.Domain.Core.Interfaces.Repositories;
 using ProductManager.Domain.Core.Interfaces.Services;
+using ProductManager.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,9 @@ namespace ProductManager.Domain.Services.Services
         {
             return _repository.GetById(id);
         }
-        public virtual IEnumerable<TEntity> GetAll()
+        public virtual IEnumerable<TEntity> GetAll(PaginationModel pagination)
         {
-            return _repository.GetAll();
+            return _repository.GetAll(pagination);
         }
         public void Add(TEntity obj)
         {

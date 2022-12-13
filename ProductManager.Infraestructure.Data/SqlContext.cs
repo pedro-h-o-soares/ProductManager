@@ -28,6 +28,9 @@ namespace ProductManager.Infraestructure.Data
                 .Property(p => p.ProviderDescription)
                     .HasMaxLength(100);
 
+            modelBuilder.Entity<Product>()
+                .Property(p => p.Active)
+                    .HasDefaultValue(true);
 
         }
 

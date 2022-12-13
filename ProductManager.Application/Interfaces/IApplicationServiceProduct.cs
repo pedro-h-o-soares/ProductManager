@@ -1,4 +1,5 @@
 ﻿using ProductManager.Application.DTO.DTO;
+using ProductManager.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace ProductManager.Application.Interfaces
 
         ProductDTO GetById(int id);
 
-        IEnumerable<ProductDTO> GetAll();
+        IEnumerable<ProductDTO> GetAll(PaginationModel pagination);
 
         void Update(ProductDTO obj);
 

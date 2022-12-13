@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProductManager.Application.DTO.DTO;
 using ProductManager.Application.Interfaces;
+using ProductManager.Domain.Models;
 using System;
 using System.Collections.Generic;
 
@@ -19,9 +20,9 @@ namespace ProductManager.Presentation.Controllers
 
         // GET api/product
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<string>> Get([FromHeader] PaginationModel pagination, [FromHeader] )
         {
-            return Ok(_applicationServiceProduct.GetAll());
+            return Ok(_applicationServiceProduct.GetAll(pagination));
         }
 
         // GET api/product/5
@@ -38,6 +39,11 @@ namespace ProductManager.Presentation.Controllers
             {
                 if (productDTO == null)
                     return NotFound();
+
+                if (productDTO.ExpiringDate < productDTO.ManufacturingDate)
+                {
+                    return BadRequest();
+                }
 
                 _applicationServiceProduct.Add(productDTO);
                 return Ok("Produto cadastrado com sucesso");
@@ -56,6 +62,11 @@ namespace ProductManager.Presentation.Controllers
             {
                 if (productDTO == null)
                     return NotFound();
+
+                if (productDTO.ExpiringDate < productDTO.ManufacturingDate)
+                {
+                    return BadRequest("A data de expiração deve ser maior que a de fabricação");
+                }
 
                 _applicationServiceProduct.Update(productDTO);
                 return Ok("Produto atualizado com sucesso");
